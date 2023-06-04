@@ -28,9 +28,9 @@ module.exports.createUser = (req, res, next) => {
     })
     .catch((err) => {
       if (err instanceof ValidationError) {
-        next(new IncorrectDataError(SIGNUP_INCORRECT_DATA_MESSAGE));
+        next(new ErrorIncorrectData(SIGNUP_INCORRECT_DATA_MESSAGE));
       } else if (err.code === 11000) {
-        next(new ConflictError(SIGNUP_INCORRECT_EMAIL_MESSAGE));
+        next(new ErrorConflict(SIGNUP_INCORRECT_EMAIL_MESSAGE));
       } else {
         next(err);
       }
