@@ -8,6 +8,7 @@ const validationErrors = require('celebrate').errors;
 
 const rootRouter = require('./routes/index');
 
+const limiter = require('./middlewares/limiter');
 const errors = require('./middlewares/errors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { ALLOWED_CORS, DEFAULT_ALLOWED_METHODS } = require('./utils/constants');
@@ -22,25 +23,12 @@ mongoose.connect(DATABASE);
 app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
+app.use(limiter);
 app.use(cors({
   origin: ALLOWED_CORS,
   method: DEFAULT_ALLOWED_METHODS,
   credentials: true,
 }))
-// app.use(cors({
-//   origin: [
-//     'http://mesto-sp.nomoredomains.monster',
-//     'https://mesto-sp.nomoredomains.monster',
-//     'http://api.mesto-sp.nomoredomains.monster',
-//     'https://api.mesto-sp.nomoredomains.monster',
-//     'http://84.201.142.51',
-//     'https://84.201.142.51',
-//     'http://localhost:3000',
-//     'http://localhost:3001',
-//   ],
-//   method: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-//   credentials: true,
-// }));
 
 app.use(requestLogger);
 
