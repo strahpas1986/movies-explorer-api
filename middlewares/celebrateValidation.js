@@ -1,7 +1,7 @@
-// IMPORT PACKAGES
+// импорт пакетов
 const { celebrate, Joi } = require('celebrate');
 
-// CREATE USER VALIDATOR
+// валидатор создания пользователя
 module.exports.createUserValidator = celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
@@ -10,7 +10,7 @@ module.exports.createUserValidator = celebrate({
   }),
 });
 
-// LOGIN USER VALIDATOR
+// валидатор логина пользователя
 module.exports.loginUserValidator = celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
@@ -18,7 +18,7 @@ module.exports.loginUserValidator = celebrate({
   }),
 });
 
-// UPDATE USER VALIDATOR
+// валидатор обновления пользователя
 module.exports.updateUserValidator = celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
@@ -26,7 +26,7 @@ module.exports.updateUserValidator = celebrate({
   }),
 });
 
-// CREATE MOVIE CARD VALIDATOR
+// валидатор записи карточки фильма
 module.exports.createMovieCardValidator = celebrate({
   body: Joi.object().keys({
     country: Joi.string().required().trim(),
@@ -43,7 +43,7 @@ module.exports.createMovieCardValidator = celebrate({
   }),
 });
 
-// DELETE MOVIE CARD VALIDATOR
+// валидатор удаления карточки с фильмом
 module.exports.deleteMovieCardValidator = celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().required().hex().length(24),

@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
-// IMPORT CONTROLLERS
+// импорт контроллера логина
 const { login } = require('../controllers/signin');
 
-// IMPORT VALIDATORS
+// импорт валидатора
 const { loginUserValidator } = require('../middlewares/celebrateValidation');
 
-// LOGIN ROUTE
+// роут логина
 router.post('/', loginUserValidator, login);
 
-// MODULE EXPORT
+// экспорт модуля
 module.exports = router;

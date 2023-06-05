@@ -26,10 +26,10 @@ const AUTHORIZATION_MESSAGE = 'Необходима авторизация';
 const AUTHORIZATION_ERROR_MESSAGE = 'Неправильная почта или пароль';
 
 const ALLOWED_CORS = [
-  // 'http://diplom.ld-webdev.nomoredomains.rocks',
-  // 'https://diplom.ld-webdev.nomoredomains.rocks',
-  // 'http://51.250.11.115',
-  // 'https://51.250.11.115',
+  'http://movies-strahpas.nomoredomains.rocks',
+  'https://movies-strahpas.nomoredomains.rocks',
+  'http://84.252.136.72',
+  'https://84.252.136.72',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
