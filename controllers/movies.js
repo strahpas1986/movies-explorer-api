@@ -5,8 +5,8 @@ const {
   CastError,
 } = require('mongoose').Error;
 const ErrorForbidden = require('../errors/ErrorForbidden');
-const ErrorNotFound = require('../errors/ErrorNotFound');
-const ErrorIncorrectData = require('../errors/ErrorIncorrectData');
+const NotFoundError = require('../errors/ErrorNotFound');
+const IncorrectDataError = require('../errors/ErrorIncorrectData');
 
 // Импорт модели
 const Movie = require('../models/movie');

@@ -26,8 +26,6 @@ const userSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    minlength: [2, 'Минимальная длина поля "description" 2 символа'],
-    maxlength: [300, 'Максимальная длина поля "description" 300 символов'],
     required: [true, 'Поле "description" должно быть заполнено'],
   },
   image: {
@@ -60,8 +58,7 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Поле "owner" должно быть заполнено'],
   },
   movieId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'MoviesExplorer',
+    type: Number,
     required: [true, 'Поле "movieId" должно быть заполнено'],
   },
   nameRU: {

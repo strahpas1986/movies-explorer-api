@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getUserInfo, updateUserInfo } = require('../controllers/user');
+const { getUserInfo, updateUserInfo } = require('../controllers/users');
 const { updateUserValidator } = require('../middlewares/celebrateValidation');
 
 router.get('/me', getUserInfo);

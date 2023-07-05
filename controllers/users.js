@@ -13,7 +13,7 @@ const {
 const User = require('../models/user');
 
 module.exports.getUserInfo = (req, res, next) => {
-  User.findUserById(req.user._id)
+  User.findById(req.user._id)
     .orFail()
     .then((user) => res.send(user))
     .catch((err) => {

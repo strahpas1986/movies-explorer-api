@@ -4,7 +4,7 @@ const {
   getCardsMoviesByOwner,
   createMovieCards,
   deleteMovies
-} = require('../controllers/movie');
+} = require('../controllers/movies');
 
 const {
   createMovieCardValidator,
