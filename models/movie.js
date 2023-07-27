@@ -4,14 +4,10 @@ const { LINK_REGEXP } = require('../utils/constants');
 const userSchema = new mongoose.Schema({
   country: {
     type: String,
-    minlength: [2, 'Минимальная длина поля "country" 2 символа'],
-    maxlength: [30, 'Максимальная длина поля "country" 30 символов'],
     default: 'США',
   },
   director: {
     type: String,
-    minlength: [2, 'Минимальная длина поля "director" 2 символа'],
-    maxlength: [30, 'Максимальная длина поля "director" 30 символов'],
     required: [true, 'Поле "director" должно быть заполнено'],
   },
   duration: {
@@ -20,8 +16,6 @@ const userSchema = new mongoose.Schema({
   },
   year: {
     type: String,
-    minlength: [2, 'Минимальная длина поля "year" 2 символа'],
-    maxlength: [30, 'Максимальная длина поля "year" 30 символов'],
     required: [true, 'Поле "year" должно быть заполнено'],
   },
   description: {
