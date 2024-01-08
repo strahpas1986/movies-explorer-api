@@ -26,10 +26,10 @@ const AUTHORIZATION_MESSAGE = 'Необходима авторизация';
 const AUTHORIZATION_ERROR_MESSAGE = 'Неправильная почта или пароль';
 
 const ALLOWED_CORS = [
-  'http://movies-strahpas.nomoredomains.rocks',
-  'https://movies-strahpas.nomoredomains.rocks',
-  'http://84.252.136.72',
-  'https://84.252.136.72',
+  'http://vladimirstrashnov.ru',
+  'https://vladimirstrashnov.ru',
+  'http://89.23.116.252',
+  'https://89.23.116.252',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
