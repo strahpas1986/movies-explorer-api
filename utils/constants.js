@@ -28,8 +28,8 @@ const AUTHORIZATION_ERROR_MESSAGE = 'Неправильная почта или 
 const ALLOWED_CORS = [
   'http://vladimirstrashnov.ru',
   'https://vladimirstrashnov.ru',
-  'http://89.23.116.252',
-  'https://89.23.116.252',
+  'http://91.200.150.203',
+  'https://91.200.150.203',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
